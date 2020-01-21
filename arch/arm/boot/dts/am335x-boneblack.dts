@@ -11,6 +11,44 @@
 / {
 	model = "TI AM335x BeagleBone Black";
 	compatible = "ti,am335x-bone-black", "ti,am335x-bone", "ti,am33xx";
+
+	pwm4: dmtimer-pwm4 {
+		compatible = "ti,omap-dmtimer-pwm";
+		#pwm-cells = <3>;
+		ti,timers = <&timer4>;
+		ti,clock-source = <0x00>; /* timer_sys_ck */
+	};
+
+	pwm5: dmtimer-pwm5 {
+		compatible = "ti,omap-dmtimer-pwm";
+		#pwm-cells = <3>;
+		ti,timers = <&timer5>;
+		ti,clock-source = <0x00>; /* timer_sys_ck */
+	};
+
+	pwm6: dmtimer-pwm6 {
+		compatible = "ti,omap-dmtimer-pwm";
+		#pwm-cells = <3>;
+		ti,timers = <&timer6>;
+		ti,clock-source = <0x00>; /* timer_sys_ck */
+	};
+
+	pwm7: dmtimer-pwm7 {
+		compatible = "ti,omap-dmtimer-pwm";
+		#pwm-cells = <3>;
+		ti,timers = <&timer7>;
+		ti,clock-source = <0x00>; /* timer_sys_ck */
+		pinctrl-names = "default";
+		pinctrl-0 = <&pwm7_pins>;
+	};
+};
+
+&am33xx_pinmux {
+	pwm7_pins: pinmux_pwm7_pins {
+		pinctrl-single,pins = <
+			AM33XX_PADCONF(AM335X_PIN_GPMC_OEN_REN, PIN_OUTPUT_PULLDOWN,  MUX_MODE2)
+		>;
+	};
 };
 
 &cpu0_opp_table {
