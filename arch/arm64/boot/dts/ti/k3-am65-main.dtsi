@@ -436,6 +436,7 @@
 
 	intr_main_gpio: interrupt-controller0 {
 		compatible = "ti,sci-intr";
+		#address-cells = <0>;
 		ti,intr-trigger-type = <1>;
 		interrupt-controller;
 		interrupt-parent = <&gic500>;
@@ -457,6 +458,7 @@
 
 		intr_main_navss: interrupt-controller1 {
 			compatible = "ti,sci-intr";
+			#address-cells = <0>;
 			ti,intr-trigger-type = <4>;
 			interrupt-controller;
 			interrupt-parent = <&gic500>;

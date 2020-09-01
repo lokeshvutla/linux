@@ -98,6 +98,7 @@
 
 	wkup_gpio_intr: interrupt-controller2 {
 		compatible = "ti,sci-intr";
+		#address-cells = <0>;
 		ti,intr-trigger-type = <1>;
 		interrupt-controller;
 		interrupt-parent = <&gic500>;
