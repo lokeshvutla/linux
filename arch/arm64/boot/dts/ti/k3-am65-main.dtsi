@@ -467,10 +467,12 @@
 					      <64 448 64>;
 		};
 
-		inta_main_udmass: interrupt-controller@33d00000 {
+		inta_main_udmass: msi-controller@33d00000 {
 			compatible = "ti,sci-inta";
 			reg = <0x0 0x33d00000 0x0 0x100000>;
+			#address-cells = <0>;
 			interrupt-controller;
+			#interrupt-cells = <0>;
 			interrupt-parent = <&intr_main_navss>;
 			msi-controller;
 			ti,sci = <&dmsc>;
