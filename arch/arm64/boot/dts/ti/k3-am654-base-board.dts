@@ -236,6 +236,7 @@
 		interrupts = <25 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-controller;
 		#interrupt-cells = <2>;
+		#address-cells = <0>;
 	};
 };
 

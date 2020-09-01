@@ -668,6 +668,7 @@
 	main_gpio0: gpio@600000 {
 		compatible = "ti,am654-gpio", "ti,keystone-gpio";
 		reg = <0x0 0x600000 0x0 0x100>;
+		#address-cells = <0>;
 		gpio-controller;
 		#gpio-cells = <2>;
 		interrupt-parent = <&intr_main_gpio>;
@@ -683,6 +684,7 @@
 	main_gpio1: gpio@601000 {
 		compatible = "ti,am654-gpio", "ti,keystone-gpio";
 		reg = <0x0 0x601000 0x0 0x100>;
+		#address-cells = <0>;
 		gpio-controller;
 		#gpio-cells = <2>;
 		interrupt-parent = <&intr_main_gpio>;
