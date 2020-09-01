@@ -211,7 +211,7 @@
 		};
 	};
 
-	tscadc0: tscadc@40200000 {
+	tscadc0: adc@40200000 {
 		compatible = "ti,am3359-tscadc";
 		reg = <0x0 0x40200000 0x0 0x1000>;
 		interrupts = <GIC_SPI 860 IRQ_TYPE_LEVEL_HIGH>;
@@ -230,7 +230,7 @@
 		};
 	};
 
-	tscadc1: tscadc@40210000 {
+	tscadc1: adc@40210000 {
 		compatible = "ti,am3359-tscadc";
 		reg = <0x0 0x40210000 0x0 0x1000>;
 		interrupts = <GIC_SPI 861 IRQ_TYPE_LEVEL_HIGH>;
